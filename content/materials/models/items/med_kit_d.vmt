@@ -1,0 +1,46 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/items/med_kit_D"
+	"$bumpmap" "models/items/med_kit_N"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.4 0.4 0.4]"
+	"$basealphaenvmapmask" "0"
+//	"$normalmapalphaenvmapmask" "2"
+	"$selfillum" "1"
+	"$selfillummask"  "models/items/med_kit_SI"
+	"$selfillumtint"	"[1.5 1.5 1.5]"
+	"$selfillumFrensel" "1.5"
+	"$selfillumFrenselMinMaxEnp" "[0.1 2.0 3.0]"
+	
+	"$detail" 						"models/items/w_battery_detail"
+	"$detailscale" 					"20"
+	"$detailblendfactor" 			1
+	"$detailblendmode" 				0
+
+
+	"$nocull" 1
+	"$model" "1"
+	"$halflambert" "1"
+
+// -- From here down is new stuff which will only be applied if $phong is set to 1 --
+	$phong 1
+	$phongexponent "8"
+	$phongboost ".5"
+	$phongfresnelranges "[0.5 2 4]"
+
+// Rim lighting parameters
+	"$rimlight" "1"				// To enable rim lighting (requires phong)
+	"$rimlightexponent" "5"             // Exponent for phong component of rim lighting
+	"$rimlightboost" ".5"	               // Boost for ambient cube component of rim lighting
+	
+	"Proxies"
+	{
+        "Sine"
+        {
+            "resultVar" "$selfillumtint"
+            "sineperiod" 3.5
+            "sinemin" 1
+            "sinemax" 1.5
+        }
+    }
+}

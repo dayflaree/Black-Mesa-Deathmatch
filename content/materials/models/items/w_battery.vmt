@@ -1,0 +1,41 @@
+"VertexLitGeneric"
+{
+"$baseTexture" 					"models/items/w_battery"
+"$bumpmap" 						"models/items/w_battery_normal"
+
+"$envmap" 						"env_cubemap"
+"$normalmapalphaenvmapmask" 	1
+"$envmaptint" 					"[0.8 0.8 0.8]"
+
+"$selfillum" 					1
+
+"$detail" 						"models/items/w_battery_detail"
+"$detailscale" 					"2"
+"$detailblendfactor" 			1
+"$detailblendmode" 				0
+
+// Phong Schtuff - DO NOT USE. BREAKS DLIGHT
+"$phong" 						"1"
+"$phongexponent" 				"5"
+"$phongboost" 					".5"
+"$phongfresnelranges"			"[0.2 .5 1.6]"
+"$phongalbedotint" 				"1"
+
+
+// Rim lighting parameters
+"$rimlight" "1"
+"$rimlightexponent" "25"
+"$rimlightboost" "0.5"
+    "$model" 1
+	
+"Proxies"
+	{
+        "Sine"
+        {
+            "resultVar" "$selfillumtint"
+            "sineperiod" 1.5
+            "sinemin" 1
+            "sinemax" 1.5
+        }
+    }
+}

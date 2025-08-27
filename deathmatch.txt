@@ -1,0 +1,6 @@
+"deathmatch"
+{
+	"base"		"sandbox"
+	"title"		"Project Ordinance: Deathmatch"
+	"maps"		"^dm_"
+}
